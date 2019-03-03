@@ -17,12 +17,16 @@ public class Prueba_Sacerdote_Adapter {
 		Sacerdote sacerdote = new Sacerdote("Pepito", funeralCristiano.descripcionRitual());
 
 		Impresora.getInstance().imprimir(sacerdote.getRitual());
-
+		Impresora.getInstance().imprimir(funeralCristiano.bendecir());
+		Impresora.getInstance().imprimir(funeralCristiano.orar());
+		
 		Cristianismo adapterJudaismo = new Adapter_Judaismo(funeralJudio);
 		
 		sacerdote.setRitual(adapterJudaismo.descripcionRitual());
 
 		Impresora.getInstance().imprimir(sacerdote.getRitual());
+		Impresora.getInstance().imprimir(adapterJudaismo.bendecir());
+		Impresora.getInstance().imprimir(adapterJudaismo.orar());
 
 	}
 
